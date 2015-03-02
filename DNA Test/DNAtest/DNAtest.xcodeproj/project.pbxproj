@@ -6,25 +6,12 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		69EAA8E71AA4ACA70006E90D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 69EAA8D91AA4ACA60006E90D;
-			remoteInfo = DNA_Strand;
-		};
-		69EAA9021AA4AFAF0006E90D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 69EAA8F41AA4AFAF0006E90D;
-			remoteInfo = DNAtest;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		69EAA8F81AA4AFAF0006E90D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69EAA8F71AA4AFAF0006E90D /* main.cpp */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		69EAA8C41AA4AA9E0006E90D /* CopyFiles */ = {
+		69EAA8F21AA4AFAF0006E90D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -36,13 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		69EAA8C61AA4AA9E0006E90D /* DNA Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DNA Test"; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DNA_Strand.xcodeproj; path = DNA_Strand/DNA_Strand.xcodeproj; sourceTree = "<group>"; };
-		69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DNAtest.xcodeproj; path = DNAtest/DNAtest.xcodeproj; sourceTree = "<group>"; };
+		69EAA8F41AA4AFAF0006E90D /* DNAtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DNAtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69EAA8F71AA4AFAF0006E90D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		69EAA8C31AA4AA9E0006E90D /* Frameworks */ = {
+		69EAA8F11AA4AFAF0006E90D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,129 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69EAA8BD1AA4AA9E0006E90D = {
+		69EAA8EB1AA4AFAF0006E90D = {
 			isa = PBXGroup;
 			children = (
-				69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */,
-				69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */,
-				69EAA8C71AA4AA9E0006E90D /* Products */,
+				69EAA8F61AA4AFAF0006E90D /* DNAtest */,
+				69EAA8F51AA4AFAF0006E90D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		69EAA8C71AA4AA9E0006E90D /* Products */ = {
+		69EAA8F51AA4AFAF0006E90D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69EAA8C61AA4AA9E0006E90D /* DNA Test */,
+				69EAA8F41AA4AFAF0006E90D /* DNAtest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69EAA8E41AA4ACA60006E90D /* Products */ = {
+		69EAA8F61AA4AFAF0006E90D /* DNAtest */ = {
 			isa = PBXGroup;
 			children = (
-				69EAA8E81AA4ACA70006E90D /* DNA_Strand */,
+				69EAA8F71AA4AFAF0006E90D /* main.cpp */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		69EAA8FF1AA4AFAF0006E90D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				69EAA9031AA4AFAF0006E90D /* DNAtest */,
-			);
-			name = Products;
+			path = DNAtest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69EAA8C51AA4AA9E0006E90D /* DNA Test */ = {
+		69EAA8F31AA4AFAF0006E90D /* DNAtest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69EAA8CD1AA4AA9E0006E90D /* Build configuration list for PBXNativeTarget "DNA Test" */;
+			buildConfigurationList = 69EAA8FB1AA4AFAF0006E90D /* Build configuration list for PBXNativeTarget "DNAtest" */;
 			buildPhases = (
-				69EAA8C21AA4AA9E0006E90D /* Sources */,
-				69EAA8C31AA4AA9E0006E90D /* Frameworks */,
-				69EAA8C41AA4AA9E0006E90D /* CopyFiles */,
+				69EAA8F01AA4AFAF0006E90D /* Sources */,
+				69EAA8F11AA4AFAF0006E90D /* Frameworks */,
+				69EAA8F21AA4AFAF0006E90D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "DNA Test";
-			productName = "DNA Test";
-			productReference = 69EAA8C61AA4AA9E0006E90D /* DNA Test */;
+			name = DNAtest;
+			productName = DNAtest;
+			productReference = 69EAA8F41AA4AFAF0006E90D /* DNAtest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		69EAA8BE1AA4AA9E0006E90D /* Project object */ = {
+		69EAA8EC1AA4AFAF0006E90D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Jacoby Kang";
 				TargetAttributes = {
-					69EAA8C51AA4AA9E0006E90D = {
+					69EAA8F31AA4AFAF0006E90D = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 69EAA8C11AA4AA9E0006E90D /* Build configuration list for PBXProject "DNA Test" */;
+			buildConfigurationList = 69EAA8EF1AA4AFAF0006E90D /* Build configuration list for PBXProject "DNAtest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 69EAA8BD1AA4AA9E0006E90D;
-			productRefGroup = 69EAA8C71AA4AA9E0006E90D /* Products */;
+			mainGroup = 69EAA8EB1AA4AFAF0006E90D;
+			productRefGroup = 69EAA8F51AA4AFAF0006E90D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 69EAA8E41AA4ACA60006E90D /* Products */;
-					ProjectRef = 69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */;
-				},
-				{
-					ProductGroup = 69EAA8FF1AA4AFAF0006E90D /* Products */;
-					ProjectRef = 69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				69EAA8C51AA4AA9E0006E90D /* DNA Test */,
+				69EAA8F31AA4AFAF0006E90D /* DNAtest */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		69EAA8E81AA4ACA70006E90D /* DNA_Strand */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = DNA_Strand;
-			remoteRef = 69EAA8E71AA4ACA70006E90D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		69EAA9031AA4AFAF0006E90D /* DNAtest */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = DNAtest;
-			remoteRef = 69EAA9021AA4AFAF0006E90D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXSourcesBuildPhase section */
-		69EAA8C21AA4AA9E0006E90D /* Sources */ = {
+		69EAA8F01AA4AFAF0006E90D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69EAA8F81AA4AFAF0006E90D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		69EAA8CB1AA4AA9E0006E90D /* Debug */ = {
+		69EAA8F91AA4AFAF0006E90D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,7 +165,7 @@
 			};
 			name = Debug;
 		};
-		69EAA8CC1AA4AA9E0006E90D /* Release */ = {
+		69EAA8FA1AA4AFAF0006E90D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,14 +199,14 @@
 			};
 			name = Release;
 		};
-		69EAA8CE1AA4AA9E0006E90D /* Debug */ = {
+		69EAA8FC1AA4AFAF0006E90D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		69EAA8CF1AA4AA9E0006E90D /* Release */ = {
+		69EAA8FD1AA4AFAF0006E90D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -265,25 +216,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69EAA8C11AA4AA9E0006E90D /* Build configuration list for PBXProject "DNA Test" */ = {
+		69EAA8EF1AA4AFAF0006E90D /* Build configuration list for PBXProject "DNAtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69EAA8CB1AA4AA9E0006E90D /* Debug */,
-				69EAA8CC1AA4AA9E0006E90D /* Release */,
+				69EAA8F91AA4AFAF0006E90D /* Debug */,
+				69EAA8FA1AA4AFAF0006E90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69EAA8CD1AA4AA9E0006E90D /* Build configuration list for PBXNativeTarget "DNA Test" */ = {
+		69EAA8FB1AA4AFAF0006E90D /* Build configuration list for PBXNativeTarget "DNAtest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69EAA8CE1AA4AA9E0006E90D /* Debug */,
-				69EAA8CF1AA4AA9E0006E90D /* Release */,
+				69EAA8FC1AA4AFAF0006E90D /* Debug */,
+				69EAA8FD1AA4AFAF0006E90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 69EAA8BE1AA4AA9E0006E90D /* Project object */;
+	rootObject = 69EAA8EC1AA4AFAF0006E90D /* Project object */;
 }
