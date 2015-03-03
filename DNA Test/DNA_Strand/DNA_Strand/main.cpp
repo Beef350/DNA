@@ -147,3 +147,50 @@ int DNA_Strand::search(size_t pos, const string & target) const
     return -1;  
 }
 
+// cleave
+// Removes from current DNA strand the sequence between the end of the
+// first occurrence of passed target sequence (e.g. "TTG"), through the end
+// of the second occurence of the target sequence.
+// pre: Array e.g. ACTTGACCTTGA and target e.g. "TTG"
+// post: ACTTGA  (ACCTTG removed)
+void DNA_Strand::cleave(const string & target)
+{
+    int i = search(target) + target.length();
+    int j = search(i, target);
+    if (j != -1) {							//if statement only works when target is found.
+        j += target.length();
+        mySize -= (j - i);
+        while (i < mySize) {
+            set(myDNA[j],i);
+            i++;
+            j++;
+        }
+    }
+}
+
+
+// cleave with start position specified
+// cleave starting from an index, returns the index after the cleaved DNA
+// or -1 if no cleaving was performed
+// pre: Array e.g. ACTTGACCTTGA and target e.g. "TTG", pos = 1
+// post: ACTTGA  (ACCTTG removed) and return value = 5
+int DNA_Strand::cleave(size_t pos, const string & target)
+{
+    int i = search(pos, target);
+    if (i != -1)
+        i += target.length();
+    int j = search(i, target);
+    size_t index = i;
+    if (j != -1) {							//if statement only works when target is found.
+        j += target.length();
+        mySize -= (j - i);
+        while (i < mySize) {
+            set(myDNA[j], i);
+            i++;
+            j++;
+        }
+        return index;
+    }
+    return -1;  
+}
+
