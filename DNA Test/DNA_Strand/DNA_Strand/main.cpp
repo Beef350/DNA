@@ -194,3 +194,18 @@ int DNA_Strand::cleave(size_t pos, const string & target)
     return -1;  
 }
 
+// cleaveAll
+// Removes from current DNA strand the sequence between pairs of target
+// sequence, i.e. from the end 1 through the end of 2, from the end of 3
+// through the end of 4, etc, but NOT from the end of 2 through the end 3,
+// or from the end of 4 through the end of 5.
+// pre: Array e.g. ACTTGATTGGGTTGCTTGCC and target e.g. "TTG"
+// post: ACTTGGGTTGCC (ATTG and CTTG removed)
+void DNA_Strand::cleaveAll(const string & target)
+{
+    int i = 0;
+    while ( i != -1) {
+        i = cleave(i, target);
+    }
+}
+
