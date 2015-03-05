@@ -209,3 +209,32 @@ void DNA_Strand::cleaveAll(const string & target)
     }
 }
 
+// countEnzyme
+// Counts the number of occurences of a single character target sequence
+// in the DNA strand.
+size_t DNA_Strand::countEnzyme(char target) const
+{
+    size_t count = 0;
+    for (size_t i = 0; i < mySize; i++) {
+        if (get(i) == target) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+// inRange : helper function
+// Returns true if index is within range, i.e., 0 <= index < mySize
+// else returns false.
+bool DNA_Strand::inRange (size_t index) const
+{
+    if (index >= mySize) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+
