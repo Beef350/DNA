@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "DNA_Strand.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
-}
+using namespace std;
+
+
+int main()
+{
+    
+    cout << "this is for project" << endl;
+    //Testing whether constructors properly work
+    DNA_Strand dnaTest("ATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAAAA");
+    
+    if (dnaTest.toString() == "ATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAAAA") {
+        //cout << "the consturctor works" << endl;
+    }
+    else {
+        cout << "Constrcutor Test Fail" << endl;
+    }
