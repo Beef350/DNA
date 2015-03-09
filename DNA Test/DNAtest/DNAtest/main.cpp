@@ -25,3 +25,14 @@ int main()
     else {
         cout << "Constrcutor Test Fail" << endl;
     }
+
+    // testing functions of the DNA_Strand class
+    
+    DNA_Strand dna_1, dna_2;
+    //Test for size method
+    if (dna_1.size() != 0) {
+        cout << "Test 1 FAIL" << endl;
+    }
+    //else {
+    //	cout << "Initial size for blank DNA is correct." << endl;
+    //}
