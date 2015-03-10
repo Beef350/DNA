@@ -36,3 +36,14 @@ int main()
     //else {
     //	cout << "Initial size for blank DNA is correct." << endl;
     //}
+
+    //Test for maxSize method
+    if (dna_1.maxSize() != 50) {
+        cout << "Size test 2 Fail" << endl;
+    }
+    
+    //maxSize and size on non-empty String
+    DNA_Strand dna_3("ACTGACTGG");
+    if (dna_3.maxSize() != 9 || dna_3.size() != 9 || dna_3.maxSize() != 9) {
+        cout << "Size test 3 Fail" << endl;
+    }
