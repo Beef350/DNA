@@ -47,3 +47,29 @@ int main()
     if (dna_3.maxSize() != 9 || dna_3.size() != 9 || dna_3.maxSize() != 9) {
         cout << "Size test 3 Fail" << endl;
     }
+
+    if (!dna_1.isEqual(dna_2)) {
+        cout << "Test 2 FAIL" << endl;
+    }
+    //else {
+    //	cout << "Equal test works on two blank DNA." << endl;
+    //}
+    
+    if (!dna_2.isEqual(dna_1)) {
+        cout << "Test 3 FAIL" << endl;
+    }
+    //else {
+    //	cout << "Equal test is reflective." << endl;
+    //}
+    
+    // create a non-empty DNA
+    string ipStr = "ABCCTG";
+    DNA_Strand dna(ipStr);
+    
+    //toString should return the contents as a string
+    if (dna.toString() == ipStr) {
+        //cout<<"Result for toString is as expected"<<endl;
+    }
+    else {
+        cout << "Test 4 FAIL." << endl;
+    }
