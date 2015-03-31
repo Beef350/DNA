@@ -73,3 +73,37 @@ int main()
     else {
         cout << "Test 4 FAIL." << endl;
     }
+
+    //test size for non-empty string
+    if (dna.size() == 6) {
+        //cout<< "Result for size is as expected"<<endl;
+    }
+    else {
+        cout << "Test 5 Fail." << endl;
+    }
+    
+    
+    //Test for Assignment operator
+    dna_1 = dna_3;
+    if (dna_1.toString() != "ACTGACTGG" || dna_1.maxSize() != 9) {
+        cout << "Assignment Operator test fail" << endl;
+    }
+    
+    //create another non-empty DNA
+    DNA_Strand dna2(ipStr);
+    
+    // Test isEqual for non-empty DNA
+    if (dna.isEqual(dna2)) {
+        // cout<< "Result for isEqual is as expected"<<endl;
+    }
+    else {
+        cout << "Test 6 Fail" << endl;
+    }
+    
+    // Test isEqual with empty DNA as well
+    if (!dna.isEqual(dna_1)) {
+        //cout<< "Result for isEqual dna_1  is as expected"<<endl;
+    }
+    else {
+        cout << "Test 7 Fail" << endl;
+1
