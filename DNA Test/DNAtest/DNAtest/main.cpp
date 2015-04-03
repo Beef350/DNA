@@ -106,4 +106,32 @@ int main()
     }
     else {
         cout << "Test 7 Fail" << endl;
+    }
+    //test isEqual with non-empty DNA with different values.
+    DNA_Strand dna_4("ACTTGGATTGTTGA");
+    
+    if (!dna.isEqual(dna_4)) {
+        //cout << "isEqual works" << endl;
+    }
+    else {
+        cout << "isEqual test fail" << endl;
+    }
+    
+    //create another non-empty DNA that isn't equal to the first one
+    ipStr = "ACTTGACTGTTG";
+    DNA_Strand dna3(ipStr);
+    
+    //Test isEqual with another non-empty DNA that isn't equal to the first one
+    if (!dna.isEqual(dna3)) {
+        //cout<<"result for isEqual with another non-empty DNA is as expected" <<endl;
+    }
+    else {
+        cout << "Test 8 Fail" << endl;
+    }
+    //done with isEqual testing
+    
+    //empty DNA and non-empty
+    if (dna_2.isEqual(dna3)) {
+        cout << "isEqual Test faul" << endl;
+    }
 1
