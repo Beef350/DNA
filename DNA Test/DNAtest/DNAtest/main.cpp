@@ -134,4 +134,25 @@ int main()
     if (dna_2.isEqual(dna3)) {
         cout << "isEqual Test faul" << endl;
     }
-1
+    
+    //start testing search
+    //define target to be searched
+    string target = "TTG";
+    string target3 = "TTGTTGTTGTTGTTGTTGAC";
+    
+    //test the search method in dna that contains target
+    //start position not specified
+    if (dna3.search(target) == 2) {
+        //cout<< "search works as expected" <<endl;
+    }
+    else {
+        cout << "Test 9 Fail" << endl;
+    }
+    
+    //start position specified
+    if (dna3.search(4, target) == 9) {   // start position after the first occurence of the target
+        //cout << "search works as expected" << endl;
+    }
+    else {
+        cout << "Test 10 Fail" << endl;
+    }
