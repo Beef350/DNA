@@ -156,3 +156,31 @@ int main()
     else {
         cout << "Test 10 Fail" << endl;
     }
+    //test the search methods with target length larger than the dna.
+    if (dna3.search(target3) == -1) {
+        //cout<< "search works" << endl;
+    }
+    else {
+        cout << "new search test fail" << endl;
+    }
+    
+    if (dna3.search(3, target3) == -1) {
+        //cout<< "search works" << endl;
+    }
+    else {
+        cout << "new search test 2 fail" << endl;
+    }
+    
+    //search empty target
+    if (dna3.search(0, "") != -1) {
+        cout << "empty search test fail" << endl;
+    }
+    //test the search method in dna that does not contain the target
+    if (dna.search(target) == -1) {							//start position unspecified
+        //cout<< "search works as exptected" <<endl;
+    }
+    else {
+        cout << "Test 11 Fail" << endl;
+    }
+    
+    
