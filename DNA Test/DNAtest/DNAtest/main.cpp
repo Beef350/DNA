@@ -182,5 +182,18 @@ int main()
     else {
         cout << "Test 11 Fail" << endl;
     }
+    if (dna.search(3, target) == -1) {						//search with start position specified.
+        //cout<< "search works as expected" << endl;
+    }
+    else {
+        cout << "Test 12 Fail" << endl;
+    }
     
+    //Test get method
+    if (dna.get(1) == 'B') {		//dna contains "ABCCTG" from above.
+        //cout<< "get method works as expected" << endl;
+    }
+    else {
+        cout << "Test 13 Fail" << endl;
+    }
     
