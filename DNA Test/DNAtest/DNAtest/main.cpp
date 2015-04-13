@@ -197,3 +197,24 @@ int main()
         cout << "Test 13 Fail" << endl;
     }
     
+    //handle exceptions for get method
+    //handle exception for trying to get a character from an empty index.
+    try {
+        cout << "Expect to end with an \"out_of_range\" exception" << endl;
+        cout << "The 20th character of dna is: " << dna.get(19) << endl;   // This statement will throw an exception
+        cout << "EXCEPTION ERROR -- YOU SHOULD NOT SEE THIS MESSAGE" << endl;
+    }
+    catch (std::out_of_range& excpt) {
+        cout << "Exception was properly thrown and caught :: " << excpt.what() << endl;
+    }
+    
+    //handle exception for trying to search an index that's not in the array's range. ( not completely necessary)
+    try {
+        cout << "Expect to end with an \"out_of_range\" exception" << endl;
+        cout << "The 20th character of dna is: " << dna.get(52) << endl;   // This statement will throw an exception
+        cout << "EXCEPTION ERROR -- YOU SHOULD NOT SEE THIS MESSAGE" << endl;
+    }
+    catch (std::out_of_range& excpt) {
+        cout << "Exception was properly thrown and caught :: " << excpt.what() << endl;
+    }
+    
