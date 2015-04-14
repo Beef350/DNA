@@ -20,7 +20,7 @@ int main()
     DNA_Strand dnaTest("ATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAAAA");
     
     if (dnaTest.toString() == "ATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAATGCAAAA") {
-        //cout << "the consturctor works" << endl;
+        //cout << "the constructor works" << endl;
     }
     else {
         cout << "Constrcutor Test Fail" << endl;
@@ -212,6 +212,25 @@ int main()
     try {
         cout << "Expect to end with an \"out_of_range\" exception" << endl;
         cout << "The 20th character of dna is: " << dna.get(52) << endl;   // This statement will throw an exception
+        cout << "EXCEPTION ERROR -- YOU SHOULD NOT SEE THIS MESSAGE" << endl;
+    }
+    catch (std::out_of_range& excpt) {
+        cout << "Exception was properly thrown and caught :: " << excpt.what() << endl;
+    }
+    
+    //Test set method
+    dna.set('A', 1); //dna contains "ABCCTG" from above.
+    if (dna.toString() == "AACCTG") {						//size should have increased by 1
+        //cout << set method worked as expected"" << endl;
+    }
+    else {
+        cout << "Test 14 Fail" << endl;
+    }
+    
+    //handle exception for set method
+    try {
+        cout << "Expect to end with an \"out_of_range\" exception" << endl;
+        dna.set('A', 6);													//This statement will throw an exception
         cout << "EXCEPTION ERROR -- YOU SHOULD NOT SEE THIS MESSAGE" << endl;
     }
     catch (std::out_of_range& excpt) {
