@@ -237,3 +237,23 @@ int main()
         cout << "Exception was properly thrown and caught :: " << excpt.what() << endl;
     }
     
+    //Test for cleave method
+    //cleave without starting position specified
+    dna3.cleave(target);  //dna3 contains "ACTTGACTGTTG" from above.
+    
+    if (dna3.toString() == "ACTTG") {
+        //cout << "cleave works as expected" << endl;
+    }
+    else {
+        cout << "Test 15 Fail" << endl;
+    }
+    
+    DNA_Strand dna4("ACTTGACTGTTG");  //new DNA
+    //test whether the cleave method returns the proper index after the cleaved segment(in this case, the index is empty)
+    if (dna4.cleave(1, target) == 5 && dna4.toString() == "ACTTG") {
+        //cout << "cleave works as expected" << endl;
+    }
+    else {
+        cout << "Test 16 Fail" << endl;
+    }
+    
