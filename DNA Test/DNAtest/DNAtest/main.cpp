@@ -257,3 +257,24 @@ int main()
         cout << "Test 16 Fail" << endl;
     }
     
+    DNA_Strand dna5("ACTTGACTTGTGTTGAG"); // new DNA that would have characters left after cleaving and contains multipe targets
+    if (dna5.cleave(4, target) == 10 && dna5.toString() == "ACTTGACTTGAG") {  //cleaving skips the first target
+        //cout <<"cleave works as expected" << endl;
+    }
+    else {
+        cout << "Test 17 Fail" << endl;
+    }
+    
+    //cleaving from an out of range position
+    if (dna5.cleave(30, target) == -1) {
+        //cout << "cleave works" << endl;
+    }
+    else {
+        cout << "Test 18 Fail" << endl;
+    }
+    
+    //cleave with only one target occurence.
+    DNA_Strand dna9("ACTTGACDT");
+    
+
+    
