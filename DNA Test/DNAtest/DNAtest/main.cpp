@@ -276,5 +276,36 @@ int main()
     //cleave with only one target occurence.
     DNA_Strand dna9("ACTTGACDT");
     
+    //cleave when target is at the end.
+    DNA_Strand dna10("ACTTDCGTTG");
+    
+    dna9.cleave(target);
+    dna10.cleave(target);
+    if (dna9.toString() != "ACTTGACDT" || dna10.toString() != "ACTTDCGTTG") {
+        cout << "cleave test fail" << endl;
+    }
+    
+    if (dna9.cleave(1, target) != -1 || dna10.cleave(1, target) != -1) {
+        cout << "cleave test 2 fail" << endl;
+    }
+    
+    //new target
+    string target2 = "TAGC";
+    //testing for a case when target is not contained.
+    if (dna5.cleave(0, target2) == -1) {
+        //cout << "cleave works" << endl;
+    }
+    else {
+        cout << "Test 19 Fail" << endl;
+    }
+    //same test as the previous for the other cleave method without specifiecd position
+    DNA_Strand dna6("ATGCATGCAT");
+    dna6.cleave(target2);
+    if (dna6.toString() == "ATGCATGCAT") {				//dna6 should remain the same.
+        //cout<<"cleave works" << endl;
+    }
+    else {
+        cout << "Test 20 Fail" << endl;
+    }
 
     
