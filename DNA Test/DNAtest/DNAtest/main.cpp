@@ -346,5 +346,20 @@ int main()
     else {
         cout << "Test 24 Fail" << endl;
     }
+    //Test overloaded countEnzyme method.
+    
+    if (dna8.countEnzyme("ACT") != 4) {
+        cout << "countEnzyme test fail" << endl;
+    }
+    
+    //Test empty DNA too
+    if (dna_2.countEnzyme("ACT") != 0) {
+        cout << "coutENzyme test on empty fail" << endl;
+    }
+    
+    //Test when no target is found.
+    if (dna8.countEnzyme("ACG") != 0) {
+        cout << "countEnzyme test 2 fail" << endl;
+    }
 
     
