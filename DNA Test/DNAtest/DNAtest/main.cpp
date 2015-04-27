@@ -307,5 +307,44 @@ int main()
     else {
         cout << "Test 20 Fail" << endl;
     }
+    
+    
+    //new dna for cleave all
+    DNA_Strand dna7("ACTTGATTGGGTTGCTTGCC");
+    
+    //Test cleaveAll
+    dna7.cleaveAll(target);			//cleaves all occurences of the target.
+    if (dna7.toString() == "ACTTGGGTTGCC") {
+        //cout << "cleaveAll works" << endl;
+    }
+    else {
+        cout << "Test 21 Fail" << endl;
+    }
+    
+    dna7.cleaveAll(target2);   //test the case when the target passed is not in the sequence.
+    if (dna7.toString() == "ACTTGGGTTGCC") {    //dna7 should not have changed.
+        //cout << "cleaveAll works" << endl;
+    }
+    else {
+        cout << "Test 22 Fail" << endl;
+    }
+    
+    //Test countEnzayme method
+    if (dna7.countEnzyme('T') == 4) {
+        //cout << "countEnzyme works" << endl;
+    }
+    else {
+        cout << "Test 23 Fail" << endl;
+    }
+    
+    DNA_Strand dna8("ACTACTACTACTA");   // no occurences of 'G'
+    //test for a non-match
+    
+    if (dna8.countEnzyme('G') == 0) {
+        //cout << "countEnzyme works" << endl;
+    }
+    else {
+        cout << "Test 24 Fail" << endl;
+    }
 
     
