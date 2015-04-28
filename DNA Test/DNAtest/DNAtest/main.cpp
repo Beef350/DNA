@@ -361,5 +361,27 @@ int main()
     if (dna8.countEnzyme("ACG") != 0) {
         cout << "countEnzyme test 2 fail" << endl;
     }
+    
+    DNA_Strand dna12("AAAAAAAAAAAAAAAA");
+    string target5 = "AAA";
+    //overlapping target test.
+    if (dna12.countEnzyme(target5)!= 5) {
+        cout << "coutEnzyme test 3 fail" << endl;
+    }
+    //testing whether a lower case typo is catched, which counts as a non-match.
+    if (dna8.countEnzyme('a') == 0) {
+        //cout<< "target is not a proper input" <<endl;
+    }
+    else {
+        cout << "Test 25 Fail" << endl;
+    }
+    
+    //Testing whether an incorrect input for DNA characters is catched.
+    if (dna8.countEnzyme('B') == 0) {
+        //cout << "target is not a proper DNA character input << endl;
+    }
+    else {
+        cout << "Test 26 Fail" << endl;
+    }
 
     
