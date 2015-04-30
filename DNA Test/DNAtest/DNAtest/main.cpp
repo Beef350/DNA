@@ -383,5 +383,30 @@ int main()
     else {
         cout << "Test 26 Fail" << endl;
     }
+    
+    //Test grow()
+    dna12.grow(60);
+    if (dna12.maxSize() != 60) {
+        cout << "Test Grow fail" << endl;
+    }
+    //searching for the previous content of DNA to ensure everything was copied properly.
+    if (dna12.search("AAAAAAAAAAAAAAAA") != 0) {
+        cout << "Test2 grow fail" << endl;
+    }
+    //Test grow on empty string
+    dna_2.grow(60);
+    if (dna_2.maxSize() != 60) {
+        cout << "Test Grow 3 fail" << endl;
+    }
+    string target7 = "ACTTGA";
+    DNA_Strand dna20(target7);
+    string target8 = "ACCTG";
+    DNA_Strand dna21(target8);
+    
+    //Test append() method
+    dna20.append(target8);
+    if (dna20.toString() != "ACTTGAACCTG") {
+        cout << "Append test 1 Fail";
+    }
 
     
