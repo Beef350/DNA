@@ -408,5 +408,38 @@ int main()
     if (dna20.toString() != "ACTTGAACCTG") {
         cout << "Append test 1 Fail";
     }
+    
+    //appending with dna object that contains "ACCTG"
+    dna20.append(dna21);
+    if (dna20.toString() != "ACTTGAACCTGACCTG") {
+        cout << "Append test 2 Fail" << endl;
+    }
+    
+    //with empty string
+    DNA_Strand dnaEmpty1;
+    dnaEmpty1.append("");
+    if (dnaEmpty1.toString() != "" || dnaEmpty1.size() != 0) {
+        cout << "Append test 3 FAil" << endl;
+    }
+    
+    dnaEmpty1.append("ACCTG");
+    if (dnaEmpty1.toString() != "ACCTG") {
+        cout << "Append test 4 Fail" << endl;
+    }
+    
+    //with the input bigger than the arraySize;
+    
+    DNA_Strand dnaEmpty2;
+    string target10 = "ACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGT";
+    dnaEmpty2.append(target10);
+    if (dnaEmpty2.toString() != "ACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGT" ||
+        dnaEmpty2.size() != target10.length()) {
+        cout << "Append test 5 Fail" << endl;
+    }
+    //with a non-empty dna
+    dna21.append(target10);
+    if (dna21.toString() != "ACCTGACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGT") {
+        cout << "Append test 6 Fail" << endl;
+    }
 
     
