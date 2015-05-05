@@ -441,5 +441,31 @@ int main()
     if (dna21.toString() != "ACCTGACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGTACTGT") {
         cout << "Append test 6 Fail" << endl;
     }
+    
+    //test Splice method.
+    //with empty
+    DNA_Strand dnaEmpty3;
+    string targetA = "TTG";
+    string insert = "TTGGGGTTG";
+    if (dnaEmpty3.splice(0, targetA, insert) != -1) {
+        cout << "splice test 1 fail" << endl;
+    }
+    if (dnaEmpty3.splice(1, "", "") != -1) {
+        cout << "splice test 2 fail" << endl;
+    }
+    DNA_Strand dnatest("ACTTTGGACTGACTGACTTGACTG");
+    DNA_Strand dnaTest2("AAAAAAAAAAAAAAAA");
+    if (dnatest.splice(0, targetA, insert) != 15) {
+        cout << "splice test 3 fail" << endl;
+    }
+    if (dnatest.toString() != "ACTTTGTTGGGGTTGACTG") {
+        cout << "splice test 4 fail" << endl;
+    }
+    
+    //two targets.
+    if (dnatest.splice(4, targetA, insert) != 9+insert.length()
+        || dnatest.toString() != "ACTTTGTTGTTGGGGTTGACTG") {
+        cout << "splice test 5 fail" << endl;
+    }
 
     
