@@ -298,7 +298,7 @@ int main()
     else {
         cout << "Test 19 Fail" << endl;
     }
-    //same test as the previous for the other cleave method without specifiecd position
+    //same test as the previous for the other cleave method without specified position
     DNA_Strand dna6("ATGCATGCAT");
     dna6.cleave(target2);
     if (dna6.toString() == "ATGCATGCAT") {				//dna6 should remain the same.
@@ -467,5 +467,34 @@ int main()
         || dnatest.toString() != "ACTTTGTTGTTGGGGTTGACTG") {
         cout << "splice test 5 fail" << endl;
     }
+    
+    string targetB = "ACTTTGTTGTTGGGGTTGACTG";
+    if (dnatest.splice(0, targetB, targetB) != -1) {
+        cout << "splice test 6 fail" << endl;
+    }
+    
+    if (dnatest.splice(0, targetA, targetB) != 6 + targetB.length()
+        || dnatest.toString() != "ACTTTGACTTTGTTGTTGGGGTTGACTGTTGGGGTTGACTG") {
+        cout << "splice test 7 fail" << endl;
+    }
+    
+    if (dnaTest2.splice(15, "AAA", "AAAA") != -1) {
+        cout << "splice test 8 fail" << endl;
+    }
+    if (dnaTest2.splice(1, "AAA", "AAAA") != 8 ||dnaTest2.toString() != "AAAAAAAAAAAAAAAAA") {
+        cout << "splice test 9 fail" << endl;
+    }
+    
+    cout << "Done testing" << endl;
+    cout << "Press enter to end pgm" << endl;
+    char tt;
+    tt = cin.get();
+    
+    
+    return 0;
+    
+    
+}
+
 
     
