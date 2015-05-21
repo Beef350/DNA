@@ -36,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		69D9D97E1B0D66E500B4F2D6 /* DNA_Strand h.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DNA_Strand h.h"; sourceTree = "<group>"; };
 		69EAA8C61AA4AA9E0006E90D /* DNA Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DNA Test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DNA_Strand.xcodeproj; path = DNA_Strand/DNA_Strand.xcodeproj; sourceTree = "<group>"; };
 		69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DNAtest.xcodeproj; path = DNAtest/DNAtest.xcodeproj; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		69EAA8BD1AA4AA9E0006E90D = {
 			isa = PBXGroup;
 			children = (
+				69D9D97E1B0D66E500B4F2D6 /* DNA_Strand h.h */,
 				69EAA8FE1AA4AFAF0006E90D /* DNAtest.xcodeproj */,
 				69EAA8E31AA4ACA60006E90D /* DNA_Strand.xcodeproj */,
 				69EAA8C71AA4AA9E0006E90D /* Products */,
