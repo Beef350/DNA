@@ -332,7 +332,7 @@ int main()
     }
     
     //Test countEnzayme method
-    if (dna7.countEnzyme('T') == 4) {
+    if (dna7.countEnzyme("T") == 4) {
         //cout << "countEnzyme works" << endl;
     }
     else {
@@ -342,7 +342,7 @@ int main()
     DNA_Strand dna8("ACTACTACTACTA");   // no occurences of 'G'
     //test for a non-match
     
-    if (dna8.countEnzyme('G') == 0) {
+    if (dna8.countEnzyme("G") == 0) {
         //cout << "countEnzyme works" << endl;
     }
     else {
@@ -370,8 +370,8 @@ int main()
     if (dna12.countEnzyme(target5)!= 5) {
         cout << "coutEnzyme test 3 fail" << endl;
     }
-    //testing whether a lower case typo is catched, which counts as a non-match.
-    if (dna8.countEnzyme('a') == 0) {
+    //testing whether a lower case typo is caught, which counts as a non-match.
+    if (dna8.countEnzyme("a") == 0) {
         //cout<< "target is not a proper input" <<endl;
     }
     else {
@@ -379,7 +379,7 @@ int main()
     }
     
     //Testing whether an incorrect input for DNA characters is catched.
-    if (dna8.countEnzyme('B') == 0) {
+    if (dna8.countEnzyme("B") == 0) {
         //cout << "target is not a proper DNA character input << endl;
     }
     else {

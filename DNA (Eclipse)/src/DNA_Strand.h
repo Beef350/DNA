@@ -109,7 +109,15 @@ public:
     // countEnzyme
     // Counts the number of occurences of a single character target sequence
     // in the DNA strand.
-    size_t countEnzyme(char target) const;
+    size_t countEnzyme(string target) const;
+
+    void grow(size_t amount);
+
+    void append(string strand);
+    void append(DNA_Strand strand);
+
+    size_t splice(int position, string strand1, string strand2);
+    size_t splice(int position, DNA_Strand strand1, DNA_Strand strand2);
 };
 
 #endif

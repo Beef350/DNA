@@ -216,11 +216,11 @@ void DNA_Strand::cleaveAll(const string & target)
 // countEnzyme
 // Counts the number of occurences of a single character target sequence
 // in the DNA strand.
-size_t DNA_Strand::countEnzyme(char target) const
+size_t DNA_Strand::countEnzyme(string target) const
 {
     size_t count = 0;
     for (size_t i = 0; i < mySize; i++) {
-        if (get(i) == target) {
+        if (get(i) == target[i]) {
             count++;
         }
     }
@@ -240,5 +240,25 @@ bool DNA_Strand::inRange (size_t index) const
         return true;
     }
 }
+
+void DNA_Strand::grow(size_t amount)
+{}
+
+void DNA_Strand::append(string strand)
+{
+	DNA_Strand::append(DNA_Strand(strand));
+}
+
+void DNA_Strand::append(DNA_Strand strand)
+{}
+
+size_t DNA_Strand::splice(int position, string strand1, string strand2)
+{
+	return DNA_Strand::splice(position, DNA_Strand(strand1), DNA_Strand(strand2));
+}
+
+size_t DNA_Strand::splice(int position, DNA_Strand strand1, DNA_Strand strand2)
+{}
+
 
 
