@@ -1,0 +1,23 @@
+#### Adv. Topics Add-0ns ####
+.recommenders
+*/bin/*
+
+# this heinous-ness allows us to exclude all of .metadata... except for the file that lists the libraries
+.metadata/*
+!.metadata/.plugins
+.metadata/.plugins/*
+!.metadata/.plugins/org.eclipse.core.runtime
+.metadata/.plugins/org.eclipse.core.runtime/*
+!.metadata/.plugins/org.eclipse.core.runtime/.settings
+.metadata/.plugins/org.eclipse.core.runtime/.settings/*
+!.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs
+
+#### OS generated files ####
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
